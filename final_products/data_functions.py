@@ -49,8 +49,8 @@ def investingData(csvname, brent):
   rolling_average = [0 for _ in range(len(price_difference))]
 
   for i in range(len(price_difference)):
-    start = i
-    end = min(len(price_difference)-1, i+4)
+    start = max(0, i-4)
+    end = i
     rolling_average[i] = round(sum(price_difference[start:end+1])/(end+1-start),2)
 
   return(common_dates, rolling_average)

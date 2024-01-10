@@ -29,11 +29,11 @@ Run the following in terminal:
 
 ## Sources
 
-Investing.com includes data from all over the world (countries including US, India, Spain, Russia, and many others). From their website, they "receive data from various sources, which include the biggest financial data providers as well as real-time market maker CFDs." It ranks among Fidelity and Yahoo Finance in reliability.
-
-
+Investing.com includes data from all over the world (countries including US, India, Spain, Russia, and many others). From their website, they "receive data from various sources, which include the biggest financial data providers as well as real-time market maker CFDs." It ranks similar to Fidelity and Yahoo Finance in reliability, being among the top three financial sites worldwide (ranked by SimilarWeb). Statista sources its oil data from Thomson Reuters. Reuters is regarded highly by those looking to source real time trusted data and services. Bloomberg sources its data from a number data centers throughout the world, obtaining feeds from exchanges and securities information processors. This historical data was obtained through the Bloomberg Terminal. Similar to Reuters, Bloomberg is trusted by many, with most large financial firms having subcriptions to Bloomberg Professional Services. While all three sources are trustworthy, there may be discrepanies which occur when collecting data which may explain the different Urals discounts for each source in the "three_series" plot. Thus, an average plot of all three sources should give us holistic view of the large oil data trends since 2022.
 
 ## Transformations
+
+There were a few transformations made to each of the data sources. When collecting data from Bloomberg and 
 
 ## Analysis
 
