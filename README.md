@@ -5,9 +5,7 @@
 -- **excel_csv** holds all downloaded data (could not get API without paying for subscription for majority of data)
 
 -- **final_products** holds all the code for the finals graphs, and other data points ne
-eded for blog posts and publications for Catherine Wolfram, plots are interactive using matplotlib, saved figures go into the saved_pngs folder
-
-  -- to change things, go to setup.py
+eded for blog posts and publications for Catherine Wolfram, plots are interactive using matplotlib, saved figures go into the saved_pngs folder (to change things, go to setup.py)
 
 -- **other** holds original graphs I remade
 
