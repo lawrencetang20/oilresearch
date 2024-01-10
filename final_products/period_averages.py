@@ -28,24 +28,22 @@ def getAverage(start_date, end_date, dates, prices):
 
   return round(sum(prices[low:high+1])/(high-low+1), 2)
 
-def period(start, end):
+def period(start, end, period):
   pI = getAverage(start, end, dates_investing, prices_investing)
   pS = getAverage(start, end, dates_statista, prices_statista)
   pB = getAverage(start, end, dates_bloomberg, prices_bloomberg)
+  print('Period ' + str(period) + ' from ' + start + ' to ' + end + ":")
   print('In the order of Investing, Statista, Bloomberg')
   print(pI, pS, pB)  
 
 if __name__ == "__main__":
   print('\n')
 
-  print('Period 1:')
-  period('09/14/23', '10/12/23')
+  period('09/14/23', '10/12/23', 1)
   print('\n')
 
-  print('Period 2:')
-  period('10/13/23', '11/16/23')
+  period('10/13/23', '11/16/23', 2)
   print('\n')
 
-  print('Period 3')
-  period('11/17/23', '01/10/24')
+  period('11/17/23', '01/10/24', 3)
   print('\n')

@@ -33,27 +33,27 @@ Investing.com includes data from all over the world (countries including US, Ind
 
 ## Transformations
 
-There were a few transformations made to each of the data sources. When collecting data from Bloomberg and Investing.com, the value returned for each date was the last price of the commodity on that day (for both Brent and Urals). The discount was calculated manually. If the last price was plotted, there would be lots of shifts and volatility, and thus these graphs opted to use a last five days rolling average; this change was made to accommodate the data from Statista. The Statista data was already using a last five days rolling average, and thus to match all three sources in order to compare and take the average of all three, all three source data use a last five days rolling average.
+There were a few transformations made to each of the data sources. When collecting data from Bloomberg and Investing.com, the value returned for each date was the last price of the commodity on that day (for both Brent and Urals). The discount was calculated manually (Urals price minus Brent price). If the last price was plotted, there would be lots of shifts and volatility, and thus these graphs opted to use a last five days rolling average; this change was made to accommodate the data from Statista. The Statista data was already using a last five days rolling average, and thus to match all three sources in order to compare and take the average of all three, all three source data use a last five days rolling average.
 
-Furthermore, some data sources had incomplete dates. For example, Bloomberg may have reported data on date A while Investing.com did not. Thus, in order to make sure that all three data sources had all the same dates, the code filters through all the dates and only kept the matching dates and their corresponding prices. This same idea was implemented in finding the averages for the thee periods in period_averages.py. If the start date was not in the reported dates for a data source, we started at the next available date after the start date. Mirroring this for the end date, if the end date was not in the reported dates for a data source, we ended at the last available date before the end date.
+Furthermore, some data sources had incomplete dates. For example, Bloomberg may have reported data on date A while Investing.com did not have dat A. Thus, in order to make sure that all three data sources had all the same dates, the code filters through all the dates and only kept the matching dates and their corresponding prices. This same idea was implemented in finding the averages for the thee periods in period_averages.py. If the start date was not in the reported dates for a data source, we started at the next available date after the start date. Mirroring this for the end date, if the end date was not in the reported dates for a data source, we ended at the last available date before the end date.
 
 ## Period Averages (from running final_products/period_averages.py)
 
-Period 1:
+**Period 1 from 09/14/23 to 10/12/23:**
 
 In the order of Investing, Statista, Bloomberg
 
 -10.14 -15.72 -16.04
 
 
-Period 2:
+**Period 2 from 10/13/23 to 11/16/23:**
 
 In the order of Investing, Statista, Bloomberg
 
 -8.35 -15.02 -12.85
 
 
-Period 3
+**Period 3 from 11/17/23 to 01/10/24:**
 
 In the order of Investing, Statista, Bloomberg
 
@@ -62,4 +62,8 @@ In the order of Investing, Statista, Bloomberg
 ## News Analysis Summary
 
 The next step was to see if there were any explanations for the large upspikes in urals discount in (as seen in the three_average.py plot).
+
+## Other (housekeeping notes)
+
+All data was downloaded into a csv file from each corresponding website besides the Brent price from Investing.com. An API call was used for the Brent price. The data remains the same.
 
