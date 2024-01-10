@@ -116,4 +116,5 @@ bloomberg = '../excel_csv/bloomberg_urals_brent.csv'
 
 matching, statistica, investing_com, bloomberg = getMatchingData(investingData(investing_urals, investingAPI(link)), statisticaData(statistica), bloombergData(bloomberg))
 
-plotSeries(matching, statistica, investing_com, bloomberg)
+if __name__ == "__main__":
+  plotSeries(matching, statistica, investing_com, bloomberg)
