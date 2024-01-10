@@ -14,7 +14,7 @@
 
 -- **test_graphs** holds code for old graphs
 
-## Installments
+## Installation
 
 The following is needed to run the Python code (if you want to run it yourself; if not you can look straight to the SAVED_PNG folder for graphs):
 
