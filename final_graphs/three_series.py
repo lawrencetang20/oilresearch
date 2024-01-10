@@ -94,7 +94,7 @@ def getMatchingData(investing_data, statistica_data, bloomberg_data):
 
   return matching, statistica, investing_com, bloomberg
 
-def plotGraph(matching, statistica, investing_com, bloomberg):
+def plotSeries(matching, statistica, investing_com, bloomberg):
   plt.plot(matching, statistica, label='Statistica')
   plt.plot(matching, investing_com, label='Investing.com')
   plt.plot(matching, bloomberg, label='Bloomberg')
@@ -116,4 +116,4 @@ bloomberg = '../excel_csv/bloomberg_urals_brent.csv'
 
 matching, statistica, investing_com, bloomberg = getMatchingData(investingData(investing_urals, investingAPI(link)), statisticaData(statistica), bloombergData(bloomberg))
 
-plotGraph(matching, statistica, investing_com, bloomberg)
+plotSeries(matching, statistica, investing_com, bloomberg)
