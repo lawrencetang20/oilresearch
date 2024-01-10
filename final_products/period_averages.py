@@ -1,5 +1,5 @@
 import data_functions as data
-from setup import start, end, link, investing_urals, statistica, bloomberg
+from setup import start, end, link, investing_urals, statista, bloomberg
 
 """
 calculates the average Urals discount in
@@ -19,7 +19,7 @@ dates:
 
 
 dates_investing, prices_investing = data.investingData(investing_urals, data.investingAPI(link))
-dates_statistica, prices_statistica = data.statisticaData(statistica)
+dates_statista, prices_statista = data.statistaData(statista)
 dates_bloomberg, prices_bloomberg = data.bloombergData(bloomberg)
 
 def getAverage(start_date, end_date, dates, prices):
@@ -30,9 +30,9 @@ def getAverage(start_date, end_date, dates, prices):
 
 def period(start, end):
   pI = getAverage(start, end, dates_investing, prices_investing)
-  pS = getAverage(start, end, dates_statistica, prices_statistica)
+  pS = getAverage(start, end, dates_statista, prices_statista)
   pB = getAverage(start, end, dates_bloomberg, prices_bloomberg)
-  print('In the order of Investing, Statistica, Bloomberg')
+  print('In the order of Investing, Statista, Bloomberg')
   print(pI, pS, pB)  
 
 if __name__ == "__main__":

@@ -17,7 +17,7 @@ November 16, 2023
 
 """
 
-csvname = '../excel_csv/statistica_data.csv'
+csvname = '../excel_csv/statista_data.csv'
 
 prices = []
 dates = []

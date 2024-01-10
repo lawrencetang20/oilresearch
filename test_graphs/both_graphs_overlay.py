@@ -53,7 +53,7 @@ for i in range(len(price_difference)):
 
 shortened_dates = [date[:len(date)-4]+date[len(date)-2:] for date in common_dates]
 
-csvname = '../excel_csv/statistica_data.csv'
+csvname = '../excel_csv/statista_data.csv'
 
 prices = []
 dates = []
@@ -66,12 +66,12 @@ with open(csvname, newline = '') as csvfile:
 
 matching = [date for date in shortened_dates if date in dates]
 
-statistica = [prices[dates.index(date)] for date in matching]
+statista = [prices[dates.index(date)] for date in matching]
 investing_com = [price_difference[shortened_dates.index(date)] for date in matching]
 
-disparity = [investing_com[i]-statistica[i] for i in range(len(matching))]
+disparity = [investing_com[i]-statista[i] for i in range(len(matching))]
 
-plt.plot(matching, statistica, label='Statistica')
+plt.plot(matching, statista, label='statista')
 plt.plot(matching, investing_com, label='Investing.com')
 plt.title('Price Difference between Urals and Brent')
 plt.xlabel('Date')
@@ -87,7 +87,7 @@ plt.tight_layout()
 
 plt.figure()
 plt.plot(matching, disparity)
-plt.title('Difference between statistica and investing')
+plt.title('Difference between statista and investing')
 plt.xlabel('Date')
 plt.ylabel('Price Difference')
 plt.xticks(matching[::30], rotation=45)

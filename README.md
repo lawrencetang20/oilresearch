@@ -27,5 +27,13 @@ Run the following in terminal:
 - pip install investpy
 - pip install yahoofinancials
 
-## Analysis and Other Notes
+## Sources
+
+Investing.com includes data from all over the world (countries including US, India, Spain, Russia, and many others). From their website, they "receive data from various sources, which include the biggest financial data providers as well as real-time market maker CFDs." It ranks among Fidelity and Yahoo Finance in reliability.
+
+
+
+## Transformations
+
+## Analysis
 

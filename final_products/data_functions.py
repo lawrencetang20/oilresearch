@@ -55,17 +55,17 @@ def investingData(csvname, brent):
 
   return(common_dates, rolling_average)
 
-def statisticaData(csvname):
-  prices_statistica = []
-  dates_statistica = []
+def statistaData(csvname):
+  prices_statista = []
+  dates_statista = []
 
   with open(csvname, newline = '') as csvfile:
     reader = csv.DictReader(csvfile)
     for row in reader:
-      prices_statistica.append(float(row['Discount']))
-      dates_statistica.append(row['\ufeffDate'])
+      prices_statista.append(float(row['Discount']))
+      dates_statista.append(row['\ufeffDate'])
   
-  return dates_statistica, prices_statistica
+  return dates_statista, prices_statista
 
 def bloombergData(csvname):
   prices_bloomberg = []
@@ -81,18 +81,18 @@ def bloombergData(csvname):
   
   return dates_bloomberg, prices_bloomberg
 
-def getMatchingData(investing_data, statistica_data, bloomberg_data):
+def getMatchingData(investing_data, statista_data, bloomberg_data):
   dates_investing, prices_investing = investing_data
-  dates_statistica, prices_statistica = statistica_data
+  dates_statista, prices_statista = statista_data
   dates_bloomberg, prices_bloomberg = bloomberg_data
 
-  matching = [date for date in dates_investing if date in dates_statistica and date in dates_bloomberg]
+  matching = [date for date in dates_investing if date in dates_statista and date in dates_bloomberg]
 
-  statistica = [prices_statistica[dates_statistica.index(date)] for date in matching]
+  statista = [prices_statista[dates_statista.index(date)] for date in matching]
   investing_com = [prices_investing[dates_investing.index(date)] for date in matching]
   bloomberg = [prices_bloomberg[dates_bloomberg.index(date)] for date in matching]
 
-  return matching, statistica, investing_com, bloomberg
+  return matching, statista, investing_com, bloomberg
 
 def getNextHighestDate(exact_date, dates):
   try:

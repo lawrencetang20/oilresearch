@@ -1,8 +1,8 @@
 import matplotlib.pyplot as plt
-from setup import matching, statistica_data, investing_com_data, bloomberg_data
+from setup import matching, statista_data, investing_com_data, bloomberg_data
 
-def plotSeries(matching, statistica, investing_com, bloomberg):
-  plt.plot(matching, statistica, label='Statistica')
+def plotSeries(matching, statista, investing_com, bloomberg):
+  plt.plot(matching, statista, label='Statista')
   plt.plot(matching, investing_com, label='Investing.com')
   plt.plot(matching, bloomberg, label='Bloomberg')
   plt.title('Urals Discounts')
@@ -17,4 +17,4 @@ def plotSeries(matching, statistica, investing_com, bloomberg):
 
 
 if __name__ == "__main__":
-  plotSeries(matching, statistica_data, investing_com_data, bloomberg_data)
+  plotSeries(matching, statista_data, investing_com_data, bloomberg_data)
