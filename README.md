@@ -2,9 +2,9 @@
 
 ## **Folder Overview**
 
-## **Installments**
+## Installments
 
-The following is needed to run the python code in final_graphs:
+The following is needed to run the python code in **final_graphs** folder:
 
 Run the following in terminal:
 - pip install mplcursors
