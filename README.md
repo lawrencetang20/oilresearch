@@ -1,4 +1,7 @@
-**Oil Reesearch for MIT Sloan under Professor Catherine Wolfram** by **Lawrence Tang**
+# README.md
+
+
+ # **Oil Reesearch for MIT Sloan under Professor Catherine Wolfram** by **Lawrence Tang**
 
 **Installments** needed to run python code:
 
