@@ -7,7 +7,7 @@ from datetime import datetime
 
 start = '2022-01-01'
 end = '2023-12-22'
-csvname = 'excel_csv/crudeoil.csv'
+csvname = '../excel_csv/crudeoil.csv'
 
 response = requests.get(f'http://api.scraperlink.com/investpy/?email=tangla@mit.edu&type=historical_data&product=commodities&from_date={start}&to_date={end}&time_frame=Daily&name=crude')
 
@@ -53,7 +53,7 @@ for i in range(len(price_difference)):
 
 shortened_dates = [date[:len(date)-4]+date[len(date)-2:] for date in common_dates]
 
-csvname = 'excel_csv/statistica_data.csv'
+csvname = '../excel_csv/statistica_data.csv'
 
 prices = []
 dates = []
