@@ -1,6 +1,6 @@
-# **Oil Research for MIT Sloan under Professor Catherine Wolfram** by **Lawrence Tang**
+# Oil Research for MIT Sloan under Professor Catherine Wolfram by Lawrence Tang
 
-## **Folder Overview**
+## Folder Overview
 
 ## Installments
 
@@ -13,8 +13,6 @@ Run the following in terminal:
 - pip install matplotlib
 - pip install investpy
 - pip install yahoofinancials
-
-
 
 ## **Analysis**
 
