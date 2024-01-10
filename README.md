@@ -1,10 +1,16 @@
-Oil research for MIT Sloan
+**Oil Reesearch for MIT Sloan under Professor Catherine Wolfram** by **Lawrence Tang**
 
-Installments
+**Installments** needed to run python code:
 
-pip install mplcursors
-pip install investpy
-pip install requests
-pip install matplotlib
-pip install investpy
-pip install yahoofinancials
+linux commands:
+- pip install mplcursors
+- pip install investpy
+- pip install requests
+- pip install matplotlib
+- pip install investpy
+- pip install yahoofinancials
+
+**Folder Overview**
+
+**Analysis**
+
