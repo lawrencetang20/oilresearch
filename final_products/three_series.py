@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-from setup import matching, statistica, investing_com, bloomberg
+from setup import matching, statistica_data, investing_com_data, bloomberg_data
 
 def plotSeries(matching, statistica, investing_com, bloomberg):
   plt.plot(matching, statistica, label='Statistica')
@@ -12,8 +12,9 @@ def plotSeries(matching, statistica, investing_com, bloomberg):
   plt.legend()
   plt.tight_layout()
   plt.savefig('../saved_pngs/three_series.png')
+  print('png saved')
   plt.show()
 
 
 if __name__ == "__main__":
-  plotSeries(matching, statistica, investing_com, bloomberg)
+  plotSeries(matching, statistica_data, investing_com_data, bloomberg_data)

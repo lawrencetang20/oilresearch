@@ -93,3 +93,9 @@ def getMatchingData(investing_data, statistica_data, bloomberg_data):
   bloomberg = [prices_bloomberg[dates_bloomberg.index(date)] for date in matching]
 
   return matching, statistica, investing_com, bloomberg
+
+def getNextHighestDate(exact_date, dates):
+  return
+
+def getNextLowestDate(exact_date, dates):
+  return

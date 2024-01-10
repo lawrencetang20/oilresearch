@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-from setup import matching, statistica, investing_com, bloomberg
+from setup import matching, statistica_data, investing_com_data, bloomberg_data
 
 def getAverage(matching, statistica, investing_com, bloomberg):
   average = [round(sum((statistica[i], investing_com[i], bloomberg[i]))/3,2) for i in range(len(matching))]
@@ -14,9 +14,10 @@ def plotAverage(matching, average):
   plt.xticks(matching[::30], rotation=45)
   plt.tight_layout()
   plt.savefig('../saved_pngs/three_average.png')
+  print('png saved')
   plt.show()
 
-average = getAverage(matching, statistica, investing_com, bloomberg)
+average = getAverage(matching, statistica_data, investing_com_data, bloomberg_data)
 
 if __name__ == "__main__":
   plotAverage(matching, average)

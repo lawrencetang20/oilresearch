@@ -8,4 +8,4 @@ investing_urals = '../excel_csv/crudeoil.csv'
 statistica = '../excel_csv/statistica_data.csv'
 bloomberg = '../excel_csv/bloomberg_urals_brent.csv'
 
-matching, statistica, investing_com, bloomberg = data.getMatchingData(data.investingData(investing_urals, data.investingAPI(link)), data.statisticaData(statistica), data.bloombergData(bloomberg))
+matching, statistica_data, investing_com_data, bloomberg_data = data.getMatchingData(data.investingData(investing_urals, data.investingAPI(link)), data.statisticaData(statistica), data.bloombergData(bloomberg))
