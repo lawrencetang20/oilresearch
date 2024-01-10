@@ -6,13 +6,17 @@ def getAverage(matching, statistica, investing_com, bloomberg):
   return average
 
 def plotAverage(matching, average):
+  plt.clf()
   plt.plot(matching, average)
   plt.title('Urals Discounts')
   plt.xlabel('Date')
   plt.ylabel('Price Difference')
   plt.xticks(matching[::30], rotation=45)
   plt.tight_layout()
+  plt.savefig('../saved_pngs/three_average.png')
   plt.show()
 
 average = getAverage(matching, statistica, investing_com, bloomberg)
-plotAverage(matching, average)
+
+if __name__ == "__main__":
+  plotAverage(matching, average)

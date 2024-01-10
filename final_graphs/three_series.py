@@ -104,6 +104,7 @@ def plotSeries(matching, statistica, investing_com, bloomberg):
   plt.xticks(matching[::30], rotation=45)
   plt.legend()
   plt.tight_layout()
+  plt.savefig('../saved_pngs/three_series.png')
   plt.show()
 
 start = '2022-01-01'
