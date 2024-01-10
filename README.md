@@ -1,8 +1,12 @@
 # **Oil Research for MIT Sloan under Professor Catherine Wolfram** by **Lawrence Tang**
 
-**Installments** needed to run python code:
+## **Folder Overview**
 
-linux commands:
+## **Installments**
+
+The following is needed to run the python code in final_graphs:
+
+Run the following in terminal:
 - pip install mplcursors
 - pip install investpy
 - pip install requests
@@ -10,7 +14,7 @@ linux commands:
 - pip install investpy
 - pip install yahoofinancials
 
-**Folder Overview**
 
-**Analysis**
+
+## **Analysis**
 
