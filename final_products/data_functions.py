@@ -3,7 +3,7 @@ import requests
 import csv
 import matplotlib.pyplot as plt
 import mplcursors
-from datetime import datetime
+from datetime import datetime, timedelta
 
 def investingAPI(url):
   response = requests.get(url)
@@ -95,7 +95,23 @@ def getMatchingData(investing_data, statistica_data, bloomberg_data):
   return matching, statistica, investing_com, bloomberg
 
 def getNextHighestDate(exact_date, dates):
-  return
+  try:
+    return dates.index(exact_date)
+  except ValueError:
+    base_datetime = datetime.strptime(exact_date, '%m/%d/%y')
+    filtered_dates = [datetime.strptime(date, '%m/%d/%y') for date in dates if datetime.strptime(date, '%m/%d/%y') > base_datetime]
+    next_highest_date = min(filtered_dates) if filtered_dates else None
+    next_highest_date_str = next_highest_date.strftime('%m/%d/%y') if next_highest_date else None
+    
+    return dates.index(next_highest_date_str)
 
 def getNextLowestDate(exact_date, dates):
-  return
+  try:
+    return dates.index(exact_date)
+  except ValueError:
+    base_datetime = datetime.strptime(exact_date, '%m/%d/%y')
+    filtered_dates = [datetime.strptime(date, '%m/%d/%y') for date in dates if datetime.strptime(date, '%m/%d/%y') < base_datetime]
+    next_lowest_date = max(filtered_dates) if filtered_dates else None
+    next_lowest_date_str = next_lowest_date.strftime('%m/%d/%y') if next_lowest_date else None
+    
+    return dates.index(next_lowest_date_str)
