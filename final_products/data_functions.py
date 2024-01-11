@@ -12,6 +12,7 @@ def investingAPI(url):
     print("API connected")
 
   brent_data = response.json()
+  # print(brent_data)
   brent_prices = [float(entry['last_close']) for entry in brent_data['data']]
   dates = [entry['rowDate'] for entry in brent_data['data']]
   

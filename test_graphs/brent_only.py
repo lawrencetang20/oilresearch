@@ -4,12 +4,10 @@ sys.path.append('/Users/lawrencetang/Desktop/Internships:Research/UROP/oilresear
 from final_products import data_functions as data
 import matplotlib.pyplot as plt
 
-print("here")
-
 bloomberg_brent = '../excel_csv/bloomberg_brent.csv'
 start = '2022-01-01'
 end = '2024-01-10'
-link = f'http://api.scraperlink.com/investpy/?email=tangla@mit.edu&type=historical_data&product=commodities&from_date={start}&to_date={end}&time_frame=Daily&name=crude'
+link = f'http://api.scraperlink.com/investpy/?email=tangla@mit.edu&type=historical_data&product=commodities&from_date={start}&to_date={end}&time_frame=Daily&name=brent'
 
 
 bloomberg_data = data.bloombergData(bloomberg_brent)
