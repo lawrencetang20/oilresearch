@@ -38,9 +38,9 @@ Furthermore, some data sources had incomplete dates. For example, Bloomberg may 
 
 ## Graphs
 
-![alt text][https://github.com/lawrencetang20/oilresearch/blob/main/saved_pngs/three_series.png]
+![alt text](https://github.com/lawrencetang20/oilresearch/blob/main/saved_pngs/three_series.png)
 
-![alt text][https://github.com/lawrencetang20/oilresearch/blob/main/saved_pngs/three_average.png]
+![alt text](https://github.com/lawrencetang20/oilresearch/blob/main/saved_pngs/three_average.png)
 
 ## Period Averages (from running final_products/period_averages.py)
 
