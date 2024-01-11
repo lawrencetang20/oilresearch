@@ -25,7 +25,7 @@ Run the following in terminal:
 
 Investing.com includes data from all over the world (countries including the US, India, Spain, Russia, and many others). From their website, they "receive data from various sources, which include the biggest financial data providers as well as real-time market maker CFDs." It ranks similar to Fidelity and Yahoo Finance in reliability, being among the top three financial sites worldwide (ranked by SimilarWeb). Statista sources its oil data from Thomson Reuters. Reuters is regarded highly by those looking to source real-time trusted data and services. Bloomberg sources its data from several data centers throughout the world, obtaining feeds from exchanges and securities information processors. This historical data was obtained through the Bloomberg Terminal. Similar to Reuters, Bloomberg is trusted by many, with most large financial firms having subscriptions to Bloomberg Professional Services. While all three sources are trustworthy, there may be discrepancies that occur when collecting data which may explain the different Urals discounts for each source in the three_series.py plot. Thus, an average plot of all three sources should give a holistic view of the large oil data trends since 2022.
 
-## Data Transformations
+## Data Transformations // IN PROGRESS
 
 There were a few transformations made to each of the data sources. When collecting data from Bloomberg and Investing.com, the value returned for each date was the last price of the commodity on that day (for both Brent and Urals). The discount was calculated manually (Urals price minus Brent price). If the last price was plotted, there would be lots of shifts and volatility, and thus these graphs opted to use a last five days rolling average; this change was made to accommodate the data from Statista. The Statista data was already using a last five days rolling average, and thus to match all three sources to compare and take the average of all three, all three source data use a last five days rolling average.
 
@@ -43,21 +43,21 @@ Furthermore, some data sources had incomplete dates. For example, Bloomberg may 
 
 In the order of Investing, Statista, Bloomberg
 
--10.14 -15.72 -16.04
+-13.02 -15.72 -16.04
 
 
 **Period 2 from 10/13/23 to 11/16/23:**
 
 In the order of Investing, Statista, Bloomberg
 
--8.35 -15.02 -12.85
+-12.41 -15.02 -12.85
 
 
 **Period 3 from 11/17/23 to 01/10/24:**
 
 In the order of Investing, Statista, Bloomberg
 
--12.26 -18.59 -12.07
+-17.42 -18.59 -12.07
 
 ## News Analysis Summary // IN PROGRESS
 
