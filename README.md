@@ -1,4 +1,4 @@
-# Oil Research for MIT Sloan under Professor Catherine Wolfram
+# Oil Research for MIT Sloan
 
 ## Folder Overview
 
@@ -35,6 +35,12 @@ Investing.com includes data from all over the world (countries including the US,
 There were a few transformations made to each of the data sources. When collecting data from Bloomberg and Investing.com, the value returned for each date was the last price of the commodity on that day (for both Brent and Urals). The discount was calculated manually (Urals price minus Brent price). If the last price was plotted, there would be lots of shifts and volatility, and thus these graphs opted to use a last five days rolling average; this change was made to accommodate the data from Statista. The Statista data was already using a last five days rolling average, and thus to match all three sources to compare and take the average of all three, all three source data use a last five days rolling average.
 
 Furthermore, some data sources had incomplete dates. For example, Bloomberg may have reported data on date A while Investing.com did not have date A. Thus, to make sure that all three data sources had the same dates, the code filters through all the dates and only kept the matching dates and their corresponding prices. This same idea was implemented in finding the averages for the three periods in period_averages.py. If the start date was not in the reported dates for a data source, we started at the next available date after the start date. Mirroring this for the end date, if the end date was not in the reported dates for a data source, we ended at the last available date before the end date.
+
+## Graphs
+
+![alt text][https://github.com/lawrencetang20/oilresearch/blob/main/saved_pngs/three_series.png]
+
+![alt text][https://github.com/lawrencetang20/oilresearch/blob/main/saved_pngs/three_average.png]
 
 ## Period Averages (from running final_products/period_averages.py)
 
