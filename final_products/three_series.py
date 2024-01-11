@@ -19,7 +19,7 @@ def plotSeries(matching, statista, investing_com, bloomberg):
   plt.axvline(x=date3, color='red', linestyle='--')
   plt.axvline(x=date4, color='red', linestyle='--')
   plt.xticks(matching[::30], rotation=45)
-  plt.legend(loc='upper left', bbox_to_anchor=(1, 1))
+  plt.legend(loc='upper right')
   plt.tight_layout()
   plt.savefig('../saved_pngs/three_series.png')
   print('png saved')
