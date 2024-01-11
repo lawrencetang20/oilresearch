@@ -23,11 +23,11 @@ def investingAPI(url):
 
   brent_prices.reverse()
   brent_dates.reverse()
-  
-  return brent_prices, brent_dates
+  # print(brent_prices, brent_dates)
+  return brent_dates, brent_prices
 
 def investingData(csvname, brent):
-  brent_prices, brent_dates = brent
+  brent_dates, brent_prices = brent
 
   urals_prices = []
   urals_dates = []
@@ -52,7 +52,7 @@ def investingData(csvname, brent):
     start = max(0, i-4)
     end = i
     rolling_average[i] = round(sum(price_difference[start:end+1])/(end+1-start),2)
-
+  # print(common_dates, rolling_average)
   return(common_dates, rolling_average)
 
 def statistaData(csvname):
@@ -63,8 +63,10 @@ def statistaData(csvname):
     reader = csv.DictReader(csvfile)
     for row in reader:
       prices_statista.append(float(row['Discount']))
-      dates_statista.append(row['\ufeffDate'])
-  
+      unformat = row['\ufeffDate']
+      formatted = datetime.strptime(unformat, '%m/%d/%y').strftime('%m/%d/%y')
+      dates_statista.append(formatted)
+  # print(dates_statista, prices_statista)
   return dates_statista, prices_statista
 
 def bloombergData(csvname):
@@ -78,7 +80,7 @@ def bloombergData(csvname):
       unformat = row['\ufeffDate']
       formatted = datetime.strptime(unformat, '%m/%d/%y').strftime('%m/%d/%y')
       dates_bloomberg.append(formatted)
-  
+  # print(dates_bloomberg, prices_bloomberg)
   return dates_bloomberg, prices_bloomberg
 
 def getMatchingData(investing_data, statista_data, bloomberg_data):
