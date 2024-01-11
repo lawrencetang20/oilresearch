@@ -57,7 +57,7 @@ In the order of Investing, Statista, Bloomberg
 
 In the order of Investing, Statista, Bloomberg
 
--12.16 -18.14 -12.07
+-12.26 -18.59 -12.07
 
 ## News Analysis Summary
 
