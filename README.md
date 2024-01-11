@@ -31,7 +31,7 @@ There were a few transformations made to each of the data sources. When collecti
 
 Furthermore, some data sources had incomplete dates. For example, Bloomberg may have reported data on date A while Investing.com did not have date A. Thus, to make sure that all three data sources had the same dates, the code filters through all the dates and only kept the matching dates and their corresponding prices. This same idea was implemented in finding the averages for the three periods in period_averages.py. If the start date was not in the reported dates for a data source, we started at the next available date after the start date. Mirroring this for the end date, if the end date was not in the reported dates for a data source, we ended at the last available date before the end date.
 
-## Graphs
+## Graphs // IN PROGRESS
 
 ![alt text](https://github.com/lawrencetang20/oilresearch/blob/main/saved_pngs/three_series.png)
 
@@ -59,7 +59,7 @@ In the order of Investing, Statista, Bloomberg
 
 -12.26 -18.59 -12.07
 
-## News Analysis Summary
+## News Analysis Summary // IN PROGRESS
 
 The next step was to see if there were any explanations for the large up spikes in the Urals discount (as seen in the three_average.py plot), particularly in August of 2022 and February of 2023.
 
