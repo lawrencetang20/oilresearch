@@ -4,7 +4,7 @@
 
 - **excel_csv** holds all downloaded data (could not get API without paying for a subscription for a majority of data)
 - **final_products** holds all the code for the final graphs, and other data points needed for blog posts and publications for Catherine Wolfram, plots are interactive using matplotlib, and saved figures go into the saved_pngs folder (to change things, go to setup.py)
-- **news_articles** holds some interesting articles used to figure out what happened in August
+- **news_articles_august_2022** holds some interesting articles used to figure out what happened in August
 - **other** holds original graphs I remade
 - **saved_pngs** holds the png files of all the plots created by graphs in final_graphs
 - **test_apis** holds code for some options for APIs that work, but do not support Urals and Brent
