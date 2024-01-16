@@ -22,7 +22,7 @@ def plotSeries(matching, statista, investing_com, bloomberg, treasury):
   plt.xticks(matching[::30], rotation=45)
   plt.legend(loc='upper right')
   plt.tight_layout()
-  plt.savefig('../saved_pngs/series.png')
+  plt.savefig('../saved_pngs/series_with_treasury_5_forward.png')
   print('png saved')
   plt.show()
 
