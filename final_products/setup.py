@@ -7,5 +7,6 @@ link = f'http://api.scraperlink.com/investpy/?email=tangla@mit.edu&type=historic
 investing_urals = '../excel_csv/crudeoil.csv'
 statista = '../excel_csv/statista_data.csv'
 bloomberg = '../excel_csv/bloomberg_urals_brent.csv'
+treasury = '../excel_csv/treasury.csv'
 
-matching, statista_data, investing_com_data, bloomberg_data = data.getMatchingData(data.investingData(investing_urals, data.investingAPI(link)), data.statistaData(statista), data.bloombergData(bloomberg))
+matching, statista_data, investing_com_data, bloomberg_data, treasury_data = data.getMatchingData(data.investingData(investing_urals, data.investingAPI(link)), data.statistaData(statista), data.bloombergData(bloomberg), data.treasuryData(treasury))

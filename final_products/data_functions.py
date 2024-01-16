@@ -10,9 +10,9 @@ def investingAPI(url):
   # check if app connected, 200 if connected
   if response.status_code == 200:
     print("API connected")
-
+  
   brent_data = response.json()
-  # print(brent_data)
+
   brent_prices = [float(entry['last_close']) for entry in brent_data['data']]
   dates = [entry['rowDate'] for entry in brent_data['data']]
   
@@ -84,18 +84,37 @@ def bloombergData(csvname):
   # print(dates_bloomberg, prices_bloomberg)
   return dates_bloomberg, prices_bloomberg
 
-def getMatchingData(investing_data, statista_data, bloomberg_data):
+def treasuryData(csvname):
+  prices_treasury = []
+  dates_treasury = []
+
+  with open(csvname, newline = '') as csvfile:
+    reader = csv.DictReader(csvfile)
+    for row in reader:
+      prices_treasury.append(float(row['Discount']))
+      unformat = row['\ufeffDates']
+      formatted = datetime.strptime(unformat, '%m/%d/%y').strftime('%m/%d/%y')
+      dates_treasury.append(formatted)
+  
+  prices_treasury.reverse()
+  dates_treasury.reverse()
+  # print(dates_bloomberg, prices_bloomberg)
+  return dates_treasury, prices_treasury
+
+def getMatchingData(investing_data, statista_data, bloomberg_data, treasury_data):
   dates_investing, prices_investing = investing_data
   dates_statista, prices_statista = statista_data
   dates_bloomberg, prices_bloomberg = bloomberg_data
+  dates_treasury, prices_treasury = treasury_data
 
-  matching = [date for date in dates_investing if date in dates_statista and date in dates_bloomberg]
+  matching = [date for date in dates_investing if date in dates_statista and date in dates_bloomberg and date in dates_treasury]
 
   statista = [prices_statista[dates_statista.index(date)] for date in matching]
   investing_com = [prices_investing[dates_investing.index(date)] for date in matching]
   bloomberg = [prices_bloomberg[dates_bloomberg.index(date)] for date in matching]
+  treasury = [prices_treasury[dates_treasury.index(date)] for date in matching]
 
-  return matching, statista, investing_com, bloomberg
+  return matching, statista, investing_com, bloomberg, treasury
 
 def getNextHighestDate(exact_date, dates):
   try:
