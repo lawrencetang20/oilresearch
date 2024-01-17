@@ -54,7 +54,7 @@ def investingData(csvname, brent):
     end = i
     rolling_average[i] = round(sum(price_difference[start:end+1])/(end+1-start),2)
   # print(common_dates, rolling_average)
-  return(common_dates, rolling_average)
+  return common_dates, rolling_average
 
 def statistaData(csvname):
   prices_statista = []
