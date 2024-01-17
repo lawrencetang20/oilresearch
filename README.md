@@ -12,7 +12,7 @@
 
 ## Installation
 
-The following is needed to run the Python code (if you want to run it yourself; if not you can look straight to the SAVED_PNG folder for graphs):
+The following is needed to run the Python code (if you want to run it yourself; if not you can look straight to the SAVED_PNG folder for graphs and FINAL_DATA.XLSX in excel_csv folder for data):
 
 Run the following in terminal:
 - pip install mplcursors
