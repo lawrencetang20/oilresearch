@@ -1,4 +1,5 @@
 import data_functions as data
+import pandas as pd
 
 start = '2022-01-01'
 end = '2024-01-10'
@@ -10,3 +11,14 @@ bloomberg = '../excel_csv/bloomberg_urals_brent.csv'
 treasury = '../excel_csv/treasury.csv'
 
 matching, statista_data, investing_com_data, bloomberg_data, treasury_data = data.getMatchingData(data.investingData(investing_urals, data.investingAPI(link)), data.statistaData(statista), data.bloombergData(bloomberg), data.treasuryData(treasury))
+
+if __name__ == "__main__":
+  df = pd.DataFrame({
+    'Matching': matching,
+    'Statista': statista_data,
+    'Investing.com': investing_com_data,
+    'Bloomberg': bloomberg_data,
+    'Treasury': treasury_data
+  })
+
+  df.to_csv('../excel_csv/python_data.csv', index=False)

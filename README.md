@@ -3,7 +3,7 @@
 ## Folder Overview
 
 - **excel_csv** holds all downloaded data (could not get API without paying for a subscription for a majority of data)
-- **final_products** holds all the code for the final graphs, and other data points needed for blog posts and publications for Catherine Wolfram, plots are interactive using matplotlib, and saved figures go into the saved_pngs folder (to change things, go to setup.py)
+- **final_products** holds all the code for the final graphs, and other data points needed for blog posts and publications and saved figures go into the saved_pngs folder (to change things, go to setup.py)
 - **news_articles_august_2022** holds some interesting articles used to figure out what happened in August
 - **other** holds original graphs I remade
 - **saved_pngs** holds the png files of all the plots created by graphs in final_graphs
@@ -21,6 +21,7 @@ Run the following in terminal:
 - pip install matplotlib
 - pip install investpy
 - pip install yahoofinancials
+- pip install pandas
 
 ## Sources
 
@@ -28,7 +29,7 @@ Investing.com includes data from all over the world (countries including the US,
 
 UPDATE: added fourth source from treasury.gov
 
-## Data Transformations // IN PROGRESS
+## Data Transformations
 
 There were a few transformations made to each of the data sources. When collecting data from Bloomberg and Investing.com, the value returned for each date was the last price of the commodity on that day (for both Brent and Urals). The discount was calculated manually (Urals price minus Brent price). If the last price was plotted, there would be lots of shifts and volatility, and thus these graphs opted to use a last five days rolling average; this change was made to accommodate the data from Statista. The Statista data was already using a last five days rolling average, and thus to match all three sources to compare and take the average of all three, all three source data use a last five days rolling average.
 
@@ -42,7 +43,7 @@ Furthermore, some data sources had incomplete dates. For example, Bloomberg may 
 
 ## Period Averages (from running final_products/period_averages.py)
 
-UPDATE: not including treasury.gov data
+UPDATE: not including treasury.gov data, not needed
 
 **Period 1 from 09/14/23 to 10/12/23:**
 
@@ -79,3 +80,5 @@ Now, for more on the the causes for the oil shift for February. Russia originall
 ## Other (housekeeping notes)
 
 All data was downloaded into a CSV file from each corresponding website besides the Brent price from Investing.com. An API call was used for the Brent price. The data remains the same.
+
+UPDATE: added fourth source treasury.gov
