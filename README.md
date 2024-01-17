@@ -2,8 +2,8 @@
 
 ## Folder Overview
 
-- **excel_csv** holds all downloaded data (could not get API without paying for a subscription for a majority of data)
-- **final_products** holds all the code for the final graphs, and other data points needed for blog posts and publications and saved figures go into the saved_pngs folder (to change things, go to setup.py)
+- **excel_csv** holds all downloaded data (could not get API without paying for a subscription for a majority of data) -- LOOK AT FINAL_DATA.XLSX
+- **final_products** holds all the code for the final graphs, and other data points needed for blog posts and publications; saved figures go into the saved_pngs folder (to change things, go to setup.py)
 - **news_articles_august_2022** holds some interesting articles used to figure out what happened in August
 - **other** holds original graphs I remade
 - **saved_pngs** holds the png files of all the plots created by graphs in final_graphs
@@ -31,7 +31,7 @@ UPDATE: added fourth source from treasury.gov
 
 ## Data Transformations
 
-There were a few transformations made to each of the data sources. When collecting data from Bloomberg and Investing.com, the value returned for each date was the last price of the commodity on that day (for both Brent and Urals). The discount was calculated manually (Urals price minus Brent price). If the last price was plotted, there would be lots of shifts and volatility, and thus these graphs opted to use a last five days rolling average; this change was made to accommodate the data from Statista. The Statista data was already using a last five days rolling average, and thus to match all three sources to compare and take the average of all three, all three source data use a last five days rolling average.
+There were a few transformations made to each of the data sources. When collecting data from Bloomberg and Investing.com, the value returned for each date was the last price of the commodity on that day (for both Brent and Urals). The discount was calculated manually in some cases (Urals price minus Brent price). If the last price was plotted, there would be lots of shifts and volatility, and thus these graphs opted to use a last five days rolling average; this change was made to accommodate the data from Statista. The Statista data was already using a last five days rolling average, and thus to match all three sources to compare and take the average of all three, all three source data use a last five days rolling average.
 
 Furthermore, some data sources had incomplete dates. For example, Bloomberg may have reported data on date A while Investing.com did not have date A. Thus, to make sure that all three data sources had the same dates, the code filters through all the dates and only kept the matching dates and their corresponding prices. This same idea was implemented in finding the averages for the three periods in period_averages.py. If the start date was not in the reported dates for a data source, we started at the next available date after the start date. Mirroring this for the end date, if the end date was not in the reported dates for a data source, we ended at the last available date before the end date.
 
@@ -67,7 +67,7 @@ In the order of Investing, Statista, Bloomberg
 
 ## News Analysis Summary
 
-The next step was to see if there were any explanations for the large up spikes in the Urals discount (as seen in the three_average.py plot), particularly in August of 2022 and February of 2023.
+The next step was to see if there were any explanations for the large up spikes in the Urals discount (as seen in the average.py plot), particularly in August of 2022 and February of 2023.
 
 After parsing through the data, it showed that the jump in Urals discount in August started mainly on 08/18/22. At this point in Russia, there were a couple of developments in the war. Russia replaced the commander of the Black Sea Fleet (the fleet of the Russian Navy) with Vice Admiral Viktor N. Sokolov. Russian villages Timonova and Soloti nineteen miles from the Ukranian border were also evacuated. Furthermore, a trilateral meeting happened in Lviv with the Turkish president, UN secretary-general, and Ukrainian president to discuss the war. Lastly, Wagner, a private military company came into play as well. Russian troops were reported to be struggling in Ukraine, and thus Wagner mercenaries started to enter the spotlight. The Wagner owner was awarded the Hero of Russia, Russia's highest merit. The heroic exploits of the company flowed throughout Russian official media. Overall, there was unexpected resilience in Russian oil output, as Russia pumped less oil on the eve of the impending invasion.
 
