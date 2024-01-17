@@ -27,7 +27,7 @@ Run the following in terminal:
 
 Investing.com includes data from all over the world (countries including the US, India, Spain, Russia, and many others). From their website, they "receive data from various sources, which include the biggest financial data providers as well as real-time market maker CFDs." It ranks similar to Fidelity and Yahoo Finance in reliability, being among the top three financial sites worldwide (ranked by SimilarWeb). Statista sources its oil data from Thomson Reuters. Reuters is regarded highly by those looking to source real-time trusted data and services. Bloomberg sources its data from several data centers throughout the world, obtaining feeds from exchanges and securities information processors. This historical data was obtained through the Bloomberg Terminal. Similar to Reuters, Bloomberg is trusted by many, with most large financial firms having subscriptions to Bloomberg Professional Services. While all three sources are trustworthy, there may be discrepancies that occur when collecting data which may explain the different Urals discounts for each source in the three_series.py plot. Thus, an average plot of all three sources should give a holistic view of the large oil data trends since 2022.
 
-UPDATE: added fourth source from treasury.gov
+UPDATE: added fourth source from treasury.gov, added fifth source from datastream
 
 ## Data Transformations
 
@@ -35,37 +35,13 @@ There were a few transformations made to each of the data sources. When collecti
 
 Furthermore, some data sources had incomplete dates. For example, Bloomberg may have reported data on date A while Investing.com did not have date A. Thus, to make sure that all three data sources had the same dates, the code filters through all the dates and only kept the matching dates and their corresponding prices. This same idea was implemented in finding the averages for the three periods in period_averages.py. If the start date was not in the reported dates for a data source, we started at the next available date after the start date. Mirroring this for the end date, if the end date was not in the reported dates for a data source, we ended at the last available date before the end date.
 
-UPDATE: added fourth source from treasury.gov -- did same transformations for this source
+UPDATE: added fourth source from treasury.gov, added fifth source from datastream -- did same transformations
 
 ## Graphs
 
 ![alt text](https://github.com/lawrencetang20/oilresearch/blob/main/saved_pngs/series.png)
 
 ![alt text](https://github.com/lawrencetang20/oilresearch/blob/main/saved_pngs/average.png)
-
-## Period Averages (from running final_products/period_averages.py)
-
-UPDATE: not including treasury.gov data, not needed
-
-**Period 1 from 09/14/23 to 10/12/23:**
-
-In the order of Investing, Statista, Bloomberg
-
--13.02 -15.72 -16.04
-
-
-**Period 2 from 10/13/23 to 11/16/23:**
-
-In the order of Investing, Statista, Bloomberg
-
--12.41 -15.02 -12.85
-
-
-**Period 3 from 11/17/23 to 01/10/24:**
-
-In the order of Investing, Statista, Bloomberg
-
--17.42 -18.59 -12.07
 
 ## News Analysis Summary
 
