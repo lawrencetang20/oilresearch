@@ -57,6 +57,6 @@ Now, for more on the the causes for the oil shift for February. Russia originall
 
 ## Other (housekeeping notes)
 
-All data was downloaded into a CSV file from each corresponding website besides the Brent price from Investing.com. An API call was used for the Brent price. The data remains the same.
+All data was downloaded into a CSV file from each corresponding website/source besides the Brent price from Investing.com. An API call was used for the Brent price. The data remains the same.
 
 UPDATE: added fourth source treasury.gov
