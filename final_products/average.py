@@ -1,10 +1,10 @@
 import matplotlib.pyplot as plt
-from setup import matching, statista_data, investing_com_data, bloomberg_data, treasury_data
+from setup import matching, statista_data, investing_com_data, bloomberg_data, treasury_data, datastream_data
 from data_functions import getNextLowestDate
 
 
-def getAverage(matching, statista, investing_com, bloomberg, treasury):
-  average = [round(sum((statista[i], investing_com[i], bloomberg[i]))/3,2) for i in range(len(matching))]
+def getAverage(matching, statista, investing_com, bloomberg, treasury, datastream):
+  average = [round(sum((statista[i], investing_com[i], bloomberg[i]), datastream[i])/4,2) for i in range(len(matching))]
   return average
 
 def plotAverage(matching, average):
@@ -27,7 +27,7 @@ def plotAverage(matching, average):
   print('png saved')
   plt.show()
 
-average = getAverage(matching, statista_data, investing_com_data, bloomberg_data, treasury_data)
+average = getAverage(matching, statista_data, investing_com_data, bloomberg_data, treasury_data, datastream_data)
 
 if __name__ == "__main__":
   plotAverage(matching, average)

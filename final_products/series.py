@@ -1,8 +1,8 @@
 import matplotlib.pyplot as plt
-from setup import matching, statista_data, investing_com_data, bloomberg_data, treasury_data
+from setup import matching, statista_data, investing_com_data, bloomberg_data, treasury_data, datastream_data
 from data_functions import getNextLowestDate
 
-def plotSeries(matching, statista, investing_com, bloomberg, treasury):
+def plotSeries(matching, statista, investing_com, bloomberg, treasury, datastream):
   date1 = getNextLowestDate('02/24/22', matching)
   date2 = getNextLowestDate('12/5/22', matching)
   date3 = getNextLowestDate('10/12/23', matching)
@@ -12,6 +12,7 @@ def plotSeries(matching, statista, investing_com, bloomberg, treasury):
   plt.plot(matching, investing_com, label='Investing.com')
   plt.plot(matching, bloomberg, label='Bloomberg')
   plt.plot(matching, treasury, label = 'Treasury')
+  plt.plot(matching, datastream, label = 'Datastream')  
   plt.title('Urals Discounts')
   plt.xlabel('Date')
   plt.ylabel('Price Difference')
@@ -28,4 +29,4 @@ def plotSeries(matching, statista, investing_com, bloomberg, treasury):
 
 
 if __name__ == "__main__":
-  plotSeries(matching, statista_data, investing_com_data, bloomberg_data, treasury_data)
+  plotSeries(matching, statista_data, investing_com_data, bloomberg_data, treasury_data, datastream_data)

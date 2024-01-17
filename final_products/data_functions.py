@@ -36,7 +36,7 @@ def investingData(csvname, brent):
   with open(csvname, newline = '') as csvfile:
     reader = csv.DictReader(csvfile)
     for row in reader:
-      urals_prices.append(float(row['Discount']))
+      urals_prices.append(float(row['Urals']))
       unformat = row['\ufeffDate']
       formatted = datetime.strptime(unformat, '%m/%d/%y').strftime('%m/%d/%y')
       urals_dates.append(formatted)
@@ -98,23 +98,42 @@ def treasuryData(csvname):
   
   prices_treasury.reverse()
   dates_treasury.reverse()
-  # print(dates_bloomberg, prices_bloomberg)
+  # print(dates_treasury, prices_treasury)
   return dates_treasury, prices_treasury
 
-def getMatchingData(investing_data, statista_data, bloomberg_data, treasury_data):
+def datastreamData(csvname):
+  prices_datastream = []
+  dates_datastream = []
+
+  with open(csvname, newline = '') as csvfile:
+    reader = csv.DictReader(csvfile)
+    for row in reader:
+      prices_datastream.append(float(row['Discount']))
+      unformat = row['\ufeffDates']
+      formatted = datetime.strptime(unformat, '%m/%d/%y').strftime('%m/%d/%y')
+      dates_datastream.append(formatted)
+  
+  prices_datastream.reverse()
+  dates_datastream.reverse()
+  # print(dates_datastream, prices_datastream)
+  return dates_datastream, prices_datastream
+
+def getMatchingData(investing_data, statista_data, bloomberg_data, treasury_data, datastream_data):
   dates_investing, prices_investing = investing_data
   dates_statista, prices_statista = statista_data
   dates_bloomberg, prices_bloomberg = bloomberg_data
   dates_treasury, prices_treasury = treasury_data
+  dates_datastream, prices_datastream = datastream_data
 
-  matching = [date for date in dates_investing if date in dates_statista and date in dates_bloomberg and date in dates_treasury]
+  matching = [date for date in dates_investing if date in dates_statista and date in dates_bloomberg and date in dates_treasury and date in dates_datastream]
 
   statista = [prices_statista[dates_statista.index(date)] for date in matching]
   investing_com = [prices_investing[dates_investing.index(date)] for date in matching]
   bloomberg = [prices_bloomberg[dates_bloomberg.index(date)] for date in matching]
   treasury = [prices_treasury[dates_treasury.index(date)] for date in matching]
+  datastream = [prices_datastream[dates_datastream.index(date)] for date in matching]
 
-  return matching, statista, investing_com, bloomberg, treasury
+  return matching, statista, investing_com, bloomberg, treasury, datastream
 
 def getNextHighestDate(exact_date, dates):
   try:
