@@ -4,7 +4,7 @@ from data_functions import getNextLowestDate
 
 
 def getAverage(matching, statista, investing_com, bloomberg, treasury):
-  average = [round(sum((statista[i], investing_com[i], bloomberg[i], treasury[i]))/4,2) for i in range(len(matching))]
+  average = [round(sum((statista[i], investing_com[i], bloomberg[i]))/3,2) for i in range(len(matching))]
   return average
 
 def plotAverage(matching, average):
