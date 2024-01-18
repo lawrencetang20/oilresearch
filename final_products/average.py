@@ -72,7 +72,10 @@ def plotAverageExtended(investing_total, statista_total, bloomberg_total, treasu
   plt.axvline(x=pd.to_datetime('12/5/22', format='%m/%d/%y'), color='red', linestyle='--', label='Vertical Line')
   plt.axvline(x=pd.to_datetime('10/12/23', format='%m/%d/%y'), color='red', linestyle='--', label='Vertical Line')
   plt.axvline(x=pd.to_datetime('11/16/23', format='%m/%d/%y'), color='red', linestyle='--', label='Vertical Line')
-
+  plt.title('Urals Discounts')
+  plt.xlabel('Date')
+  plt.ylabel('Price Difference')
+  plt.tight_layout()
   plt.savefig('../saved_pngs/average_extended_no_treasury.png')
   print('png saved')
   plt.show()
