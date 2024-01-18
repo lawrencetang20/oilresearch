@@ -41,10 +41,14 @@ UPDATE: added fourth source from treasury.gov, added fifth source from datastrea
 
 ## Graphs
 
-** with extended dates as far as possible **
+**with extended dates as far as possible**
+![alt text](https://github.com/lawrencetang20/oilresearch/blob/main/saved_pngs/series_extended_with_treasury.png)
 
+![alt text](https://github.com/lawrencetang20/oilresearch/blob/main/saved_pngs/series_extended_no_treasury.png)
 
-** with only matching dates **
+![alt text](https://github.com/lawrencetang20/oilresearch/blob/main/saved_pngs/average_extended_no_treasury.png)
+
+**with only matching dates**
 ![alt text](https://github.com/lawrencetang20/oilresearch/blob/main/saved_pngs/series_matching.png)
 
 ![alt text](https://github.com/lawrencetang20/oilresearch/blob/main/saved_pngs/average_matching_no_treasury.png)
