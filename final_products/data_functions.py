@@ -46,13 +46,13 @@ def investingData(csvname, brent):
 
   common_dates = [date for date in urals_dates if date in brent_dates]
 
-  price_difference = [round(urals_prices[urals_dates.index(date)] - brent_prices[brent_dates.index(date)], 2) for date in common_dates]
+  price_difference = [round(urals_prices[urals_dates.index(date)] - brent_prices[brent_dates.index(date)], 3) for date in common_dates]
   rolling_average = [0 for _ in range(len(price_difference))]
 
   for i in range(len(price_difference)):
     start = max(0, i-4)
     end = i
-    rolling_average[i] = round(sum(price_difference[start:end+1])/(end+1-start),2)
+    rolling_average[i] = round(sum(price_difference[start:end+1])/(end+1-start),3)
   # print(common_dates, rolling_average)
   return common_dates, rolling_average
 

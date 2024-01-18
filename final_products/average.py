@@ -4,7 +4,7 @@ from data_functions import getNextLowestDate
 
 
 def getAverage(matching, statista, investing_com, bloomberg, treasury, datastream):
-  average = [round(sum((statista[i], investing_com[i], bloomberg[i]), datastream[i])/4,2) for i in range(len(matching))]
+  average = [round(sum((statista[i], investing_com[i], bloomberg[i], datastream[i]))/4,3) for i in range(len(matching))]
   return average
 
 def plotAverage(matching, average):
@@ -23,7 +23,7 @@ def plotAverage(matching, average):
   plt.axvline(x=date4, color='red', linestyle='--')
   plt.xticks(matching[::30], rotation=45)
   plt.tight_layout()
-  plt.savefig('../saved_pngs/average.png')
+  plt.savefig('../saved_pngs/average_matching_no_treasury.png')
   print('png saved')
   plt.show()
 

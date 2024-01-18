@@ -2,7 +2,9 @@
 
 ## Folder Overview
 
-- **excel_csv** holds all downloaded data (could not get API without paying for a subscription for a majority of data) -- LOOK AT FINAL_DATA.XLSX
+LOOK AT FINAL_DATA.XLSX for more information, tab final python output
+
+- **excel_csv** holds all downloaded data (could not get API without paying for a subscription for a majority of data)
 - **final_products** holds all the code for the final graphs, and other data points needed for blog posts and publications; saved figures go into the saved_pngs folder (to change things, go to setup.py)
 - **news_articles_august_2022** holds some interesting articles used to figure out what happened in August
 - **other** holds original graphs I remade
@@ -39,13 +41,17 @@ UPDATE: added fourth source from treasury.gov, added fifth source from datastrea
 
 ## Graphs
 
-![alt text](https://github.com/lawrencetang20/oilresearch/blob/main/saved_pngs/series.png)
+** with extended dates as far as possible **
+
+
+** with only matching dates **
+![alt text](https://github.com/lawrencetang20/oilresearch/blob/main/saved_pngs/series_matching.png)
 
 ![alt text](https://github.com/lawrencetang20/oilresearch/blob/main/saved_pngs/average.png)
 
 ## News Analysis Summary
 
-The next step was to see if there were any explanations for the large up spikes in the Urals discount (as seen in the average.py plot), particularly in August of 2022 and February of 2023.
+The next step was to see if there were any explanations for the large up spikes in the Urals discount (as seen in the average.py plots), particularly in August of 2022 and February of 2023.
 
 After parsing through the data, it showed that the jump in Urals discount in August started mainly on 08/18/22. At this point in Russia, there were a couple of developments in the war. Russia replaced the commander of the Black Sea Fleet (the fleet of the Russian Navy) with Vice Admiral Viktor N. Sokolov. Russian villages Timonova and Soloti nineteen miles from the Ukranian border were also evacuated. Furthermore, a trilateral meeting happened in Lviv with the Turkish president, UN secretary-general, and Ukrainian president to discuss the war. Lastly, Wagner, a private military company came into play as well. Russian troops were reported to be struggling in Ukraine, and thus Wagner mercenaries started to enter the spotlight. The Wagner owner was awarded the Hero of Russia, Russia's highest merit. The heroic exploits of the company flowed throughout Russian official media. Overall, there was unexpected resilience in Russian oil output, as Russia pumped less oil on the eve of the impending invasion.
 

@@ -26,7 +26,7 @@ def plotSeries(matching, statista, investing_com, bloomberg, treasury, datastrea
   plt.xticks(matching[::30], rotation=45)
   plt.legend(loc='upper right')
   plt.tight_layout()
-  plt.savefig('../saved_pngs/series.png')
+  plt.savefig('../saved_pngs/series_matching.png')
   print('png saved')
   plt.show()
 
@@ -87,11 +87,13 @@ def plotSeriesExtended(investing_total, statista_total, bloomberg_total, treasur
   plt.axvline(x=pd.to_datetime('11/16/23', format='%m/%d/%y'), color='red', linestyle='--', label='Vertical Line')
   if not no_treasury:
     plt.savefig('../saved_pngs/series_extended_with_treasury.png')
+    print('png saved')
   else:
     plt.savefig('../saved_pngs/series_extended_no_treasury.png')
+    print('png saved')
   
   plt.show()
 
 if __name__ == "__main__":
-  # plotSeries(matching, statista_data, investing_com_data, bloomberg_data, treasury_data, datastream_data)
-  plotSeriesExtended(investing_total, statista_total, bloomberg_total, treasury_total, datastream_total, True)
+  plotSeries(matching, statista_data, investing_com_data, bloomberg_data, treasury_data, datastream_data)
+  plotSeriesExtended(investing_total, statista_total, bloomberg_total, treasury_total, datastream_total, False)
