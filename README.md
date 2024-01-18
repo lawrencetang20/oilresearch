@@ -47,7 +47,7 @@ UPDATE: added fourth source from treasury.gov, added fifth source from datastrea
 ** with only matching dates **
 ![alt text](https://github.com/lawrencetang20/oilresearch/blob/main/saved_pngs/series_matching.png)
 
-![alt text](https://github.com/lawrencetang20/oilresearch/blob/main/saved_pngs/average_matching.png)
+![alt text](https://github.com/lawrencetang20/oilresearch/blob/main/saved_pngs/average_matching_no_treasury.png)
 
 ## News Analysis Summary
 
