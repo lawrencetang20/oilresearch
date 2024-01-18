@@ -96,4 +96,4 @@ def plotSeriesExtended(investing_total, statista_total, bloomberg_total, treasur
 
 if __name__ == "__main__":
   plotSeries(matching, statista_data, investing_com_data, bloomberg_data, treasury_data, datastream_data)
-  plotSeriesExtended(investing_total, statista_total, bloomberg_total, treasury_total, datastream_total, False)
+  plotSeriesExtended(investing_total, statista_total, bloomberg_total, treasury_total, datastream_total, True)
