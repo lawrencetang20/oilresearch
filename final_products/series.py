@@ -18,7 +18,7 @@ def plotSeries(matching, statista, investing_com, bloomberg, treasury, datastrea
   plt.plot(matching, treasury, label = 'Treasury')
   plt.title('Urals Discounts')
   plt.xlabel('Date')
-  plt.ylabel('Price Difference')
+  plt.ylabel('Price Difference ($/bbl)')
   plt.axvline(x=date1, color='red', linestyle='--')
   plt.axvline(x=date2, color='red', linestyle='--')
   plt.axvline(x=date3, color='red', linestyle='--')
@@ -87,7 +87,7 @@ def plotSeriesExtended(investing_total, statista_total, bloomberg_total, treasur
   plt.axvline(x=pd.to_datetime('11/16/23', format='%m/%d/%y'), color='red', linestyle='--', label='Vertical Line')
   plt.title('Urals Discounts')
   plt.xlabel('Date')
-  plt.ylabel('Price Difference')
+  plt.ylabel('Price Difference ($/bbl)')
   plt.tight_layout()
   if not no_treasury:
     plt.savefig('../saved_pngs/series_extended_with_treasury.png')
@@ -100,4 +100,4 @@ def plotSeriesExtended(investing_total, statista_total, bloomberg_total, treasur
 
 if __name__ == "__main__":
   plotSeries(matching, statista_data, investing_com_data, bloomberg_data, treasury_data, datastream_data)
-  plotSeriesExtended(investing_total, statista_total, bloomberg_total, treasury_total, datastream_total, False)
+  plotSeriesExtended(investing_total, statista_total, bloomberg_total, treasury_total, datastream_total, True)
