@@ -21,7 +21,7 @@ def plotSeries(matching, statista, investing_com, bloomberg, treasury, datastrea
   plt.ylabel('Price Difference ($/bbl)')
   plt.axvline(x=date1, color='red', linestyle='--')
   plt.axvline(x=date2, color='red', linestyle='--')
-  plt.axvline(x=date3, color='red', linestyle='--')
+  # plt.axvline(x=date3, color='red', linestyle='--')
   plt.axvline(x=date4, color='red', linestyle='--')
   plt.xticks(matching[::30], rotation=45)
   plt.legend(loc='upper right')
@@ -83,7 +83,7 @@ def plotSeriesExtended(investing_total, statista_total, bloomberg_total, treasur
 
   plt.axvline(x=pd.to_datetime('02/24/22', format='%m/%d/%y'), color='red', linestyle='--', label='Vertical Line')
   plt.axvline(x=pd.to_datetime('12/5/22', format='%m/%d/%y'), color='red', linestyle='--', label='Vertical Line')
-  plt.axvline(x=pd.to_datetime('10/12/23', format='%m/%d/%y'), color='red', linestyle='--', label='Vertical Line')
+  # plt.axvline(x=pd.to_datetime('10/12/23', format='%m/%d/%y'), color='red', linestyle='--', label='Vertical Line')
   plt.axvline(x=pd.to_datetime('11/16/23', format='%m/%d/%y'), color='red', linestyle='--', label='Vertical Line')
   plt.title('Urals Discounts')
   plt.xlabel('Date')
@@ -100,4 +100,4 @@ def plotSeriesExtended(investing_total, statista_total, bloomberg_total, treasur
 
 if __name__ == "__main__":
   plotSeries(matching, statista_data, investing_com_data, bloomberg_data, treasury_data, datastream_data)
-  plotSeriesExtended(investing_total, statista_total, bloomberg_total, treasury_total, datastream_total, True)
+  plotSeriesExtended(investing_total, statista_total, bloomberg_total, treasury_total, datastream_total, False)
