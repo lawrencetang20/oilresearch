@@ -1,4 +1,4 @@
-# URALS_BRENT RESEARCH
+# Oil Research for MIT Sloan
 
 ## Folder Overview
 
