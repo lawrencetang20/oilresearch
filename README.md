@@ -2,7 +2,7 @@
 
 ## Overview
 
-Recreating graphs in chapter 2 of the paper:
+Recreating graphs in section 2 of the paper. In each folder, it is broken up by figure (beside test folders).
 
 - **documentation** holds all documentation needed to understand figures and code
 - **excel_csv** holds all downloaded data (could not get API without paying for a subscription for a majority of data)
