@@ -26,7 +26,7 @@ def plotAverage(matching, average):
   plt.axvline(x=date4, color='red', linestyle='--')
   plt.xticks(matching[::30], rotation=45)
   plt.tight_layout()
-  plt.savefig('../saved_pngs/average_matching_no_treasury.png')
+  plt.savefig('../../saved_pngs/figure_4/average_matching_no_treasury.png')
   print('png saved')
   plt.show()
 
@@ -76,7 +76,7 @@ def plotAverageExtended(investing_total, statista_total, bloomberg_total, treasu
   plt.xlabel('Date')
   plt.ylabel('Price Difference ($/bbl)')
   plt.tight_layout()
-  plt.savefig('../saved_pngs/average_extended_no_treasury.png')
+  plt.savefig('../../saved_pngs/figure_4/average_extended_no_treasury.png')
   print('png saved')
   plt.show()
 

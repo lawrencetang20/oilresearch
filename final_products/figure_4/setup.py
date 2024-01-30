@@ -5,11 +5,11 @@ start = '2022-01-01'
 end = '2024-01-17'
 link = f'http://api.scraperlink.com/investpy/?email=tangla@mit.edu&type=historical_data&product=commodities&from_date={start}&to_date={end}&time_frame=Daily&name=brent'
 
-investing_urals = '../excel_csv/crudeoil.csv'
-statista = '../excel_csv/statista_data.csv'
-bloomberg = '../excel_csv/bloomberg_urals_brent.csv'
-treasury = '../excel_csv/treasury.csv'
-datastream = '../excel_csv/datastream.csv'
+investing_urals = '../../excel_csv/figure_4/crudeoil.csv'
+statista = '../../excel_csv/figure_4/statista_data.csv'
+bloomberg = '../../excel_csv/figure_4/bloomberg_urals_brent.csv'
+treasury = '../../excel_csv/figure_4/treasury.csv'
+datastream = '../../excel_csv/figure_4/datastream.csv'
 
 investing_total = data.investingData(investing_urals, data.investingAPI(link))
 statista_total = data.statistaData(statista)
@@ -29,4 +29,4 @@ if __name__ == "__main__":
     'Datastream': datastream_data
   })
 
-  df.to_csv('../excel_csv/matching_dates.csv', index=False)
+  df.to_csv('../../excel_csv/figure_4/matching_dates.csv', index=False)

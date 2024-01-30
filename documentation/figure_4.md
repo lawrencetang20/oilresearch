@@ -1,4 +1,6 @@
-# More Details for Urals Brent Discount Figures
+# More Details for Urals Brent Discount (Figure 4)
+
+Look at FINAL_DATA.xlsx in excel_csv to get the whole overview
 
 ## Sources
 

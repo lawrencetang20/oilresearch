@@ -10,7 +10,7 @@ pip install matplotlib
 
 """
 
-csvname = '../excel_csv/bloomberg_urals_brent.csv'
+csvname = '../excel_csv/figure_4/bloomberg_urals_brent.csv'
 
 prices = []
 dates = []

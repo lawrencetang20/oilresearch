@@ -26,7 +26,7 @@ def plotSeries(matching, statista, investing_com, bloomberg, treasury, datastrea
   plt.xticks(matching[::30], rotation=45)
   plt.legend(loc='upper right')
   plt.tight_layout()
-  plt.savefig('../saved_pngs/series_matching.png')
+  plt.savefig('../../saved_pngs/figure_4/series_matching.png')
   print('png saved')
   plt.show()
 
@@ -90,14 +90,15 @@ def plotSeriesExtended(investing_total, statista_total, bloomberg_total, treasur
   plt.ylabel('Price Difference ($/bbl)')
   plt.tight_layout()
   if not no_treasury:
-    plt.savefig('../saved_pngs/series_extended_with_treasury.png')
+    plt.savefig('../../saved_pngs/figure_4/series_extended_with_treasury.png')
     print('png saved')
   else:
-    plt.savefig('../saved_pngs/series_extended_no_treasury.png')
+    plt.savefig('../../saved_pngs/figure_4/series_extended_no_treasury.png')
     print('png saved')
   
   plt.show()
 
 if __name__ == "__main__":
   plotSeries(matching, statista_data, investing_com_data, bloomberg_data, treasury_data, datastream_data)
+  ## MAKE TRUE INSTEAD OF FALSE IN ORDER TO DO NO TREASURY
   plotSeriesExtended(investing_total, statista_total, bloomberg_total, treasury_total, datastream_total, False)
