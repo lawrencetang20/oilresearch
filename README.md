@@ -26,4 +26,25 @@ Run the following in terminal:
 - pip install yahoofinancials
 - pip install pandas
 
-## Graphs UNDER CONSTRUCTION
+## Graphs
+
+### Figure 1
+
+![](/saved_pngs/figure_1/figure_1_part_a.png)
+![](/saved_pngs/figure_1/figure_1_part_b.png)
+
+### Figure 2
+
+### Figure 3
+
+### Figure 4
+![](/saved_pngs/figure_4/average_extended_no_treasury.png)
+![](/saved_pngs/figure_4/series_extended_no_treasury.png)
+Both displaying no treasury.gov data.
+
+### Figure 5
+
+### Figure 6
+
+### Figure 7
+
