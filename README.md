@@ -34,6 +34,7 @@ Run the following in terminal:
 ![](/saved_pngs/figure_1/figure_1_part_b.png)
 
 ### Figure 2
+![](/saved_pngs/figure_2/figure_2.png)
 
 ### Figure 3
 
