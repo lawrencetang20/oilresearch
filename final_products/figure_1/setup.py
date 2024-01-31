@@ -6,7 +6,7 @@ end = 'May 2023'
 part_a = '../../excel_csv/figure_1/figure_1_a.csv'
 part_b = '../../excel_csv/figure_1/figure_1_b.csv'
 
-part_a_data = data.part_a_data(part_a)
+part_a_dates, part_a_values = data.part_a_data(part_a)
 part_b_dates, part_b_values = data.part_b_data(part_b)
 
 start_index = part_b_dates.index(start)

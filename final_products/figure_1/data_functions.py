@@ -2,7 +2,16 @@ import csv
 
 def part_a_data(csvname):
 
-  return
+  years = []
+  volumes = []
+
+  with open(csvname, newline='') as csvfile:
+    reader = csv.DictReader(csvfile)
+    for row in reader:
+      years.append(int(row['Year']))
+      volumes.append(float(row['Volume']))
+
+  return years, volumes
 
 def part_b_data(csvname):
 
