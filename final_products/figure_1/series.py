@@ -2,7 +2,7 @@ from setup import part_a_dates, part_a_values, part_b_dates, part_b_values
 import matplotlib.pyplot as plt
 
 def plotMonthly(dates, values):
-  plt.figure(figsize=(6, 6))
+  plt.figure(figsize=(12, 6))
   plt.plot(dates, values, linestyle='-')
   plt.ylim(4, 12)
   plt.ylabel('Extraction (million barrels per day)')
@@ -15,7 +15,7 @@ def plotMonthly(dates, values):
   plt.show()
 
 def plotAnnually(dates, values):
-  plt.figure(figsize=(6, 6))
+  plt.figure(figsize=(12, 6))
   plt.plot(dates, values, linestyle='-')
   plt.ylim(4, 12)
   plt.ylabel('Extraction (million barrels per day)')
