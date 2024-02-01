@@ -37,6 +37,7 @@ Run the following in terminal:
 ![](/saved_pngs/figure_2/figure_2.png)
 
 ### Figure 3 - Russia's oil product exports by destination
+![](/saved_pngs/figure_3/figure_3.png)
 
 ### Figure 4 - Russian Urals price minus Brent price: average and series of 4 sources
 ![](/saved_pngs/figure_4/average_extended_no_treasury.png)
