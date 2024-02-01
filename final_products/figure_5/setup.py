@@ -24,3 +24,11 @@ end_index = urals_dates.index(end_urals)
 
 urals_dates = urals_dates[start_index: end_index+1]
 urals_values = urals_values[start_index: end_index+1]
+
+def preOrPost(date):
+  if urals_dates.index(date) <= urals_dates.index('Dec-16'):
+    return 'Pre'
+  else:
+    return 'Post'
+
+points = [(oil_extraction_values[i], urals_values[i], urals_dates[i], preOrPost(urals_dates[i])) for i in range(len(urals_dates))]
