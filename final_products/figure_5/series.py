@@ -2,6 +2,7 @@ from setup import points
 import matplotlib.pyplot as plt
 from matplotlib.colors import Normalize
 from matplotlib.cm import ScalarMappable
+import numpy as np
 
 def regressionPlot(data):
   x_values = [point[0] for point in data]
@@ -24,15 +25,22 @@ def regressionPlot(data):
     elif label == 'Pre':
       ax.scatter(x_values[i], y_values[i], color=color, label=label)
 
+  coeffs = np.polyfit(x_values, y_values, 1)
+  slope = coeffs[0]
+  intercept = coeffs[1]
+  regression_line = [slope * x + intercept for x in x_values]
+  ax.plot(x_values, regression_line, color='black', label='Regression Line')
+
   ax.set_xlabel('Extraction (million barrels per day)')
   ax.set_ylabel('Price ($ per barrel)')
   ax.set_title('Scatter Plot of Points')
 
-  cbar_ax = fig.add_axes([0.95, 0.15, 0.05, 0.7])  # [left, bottom, width, height]
-  cbar = plt.colorbar(ScalarMappable(norm=norm, cmap=cmap), cax=cbar_ax)
-  cbar.set_label('Month')
-
+  cbar = plt.colorbar(ScalarMappable(norm=norm, cmap=cmap), pad=0.02)
+  cbar.set_ticks([])
+  
   plt.tight_layout()
+  plt.savefig('../../saved_pngs/figure_5/regression.png')
+  print('png saved')
   plt.show()
 
 
