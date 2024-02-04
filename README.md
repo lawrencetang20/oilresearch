@@ -46,6 +46,7 @@ Run the following in terminal:
 Both displaying no treasury.gov data.
 
 ### Figure 5 - Russia's oil extration versus Urals price
+![](/saved_pngs/figure_5/regression.png)
 
 ### Figure 6 - Monthly Brent crude oil prices vs. commodity basket
 
