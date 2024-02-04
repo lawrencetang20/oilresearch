@@ -25,6 +25,7 @@ Run the following in terminal:
 - pip install investpy
 - pip install yahoofinancials
 - pip install pandas
+- python -m pip install numpy scikit-learn statsmodels
 
 ## Graphs
 
