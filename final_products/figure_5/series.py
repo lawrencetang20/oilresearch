@@ -29,7 +29,6 @@ def regressionPlot(data):
 
   ax.set_xlabel('Extraction (million barrels per day)')
   ax.set_ylabel('Price ($ per barrel)')
-  ax.set_title('Scatter Plot of Points')
 
   # Create colorbars for 'Pre' and 'Post' gradients
   pre_cbar = plt.colorbar(ScalarMappable(norm=norm, cmap=plt.cm.Reds), pad=0.02, ax=ax, orientation='vertical')
