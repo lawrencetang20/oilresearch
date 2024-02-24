@@ -1,5 +1,9 @@
 # Oil Research for MIT Sloan
 
+## Blog Post
+
+Created the graphs for this [blog post](https://cepr.org/voxeu/columns/how-make-price-cap-russian-oil-most-effective).
+
 ## Overview
 
 Recreating graphs in section 2 of the paper. In each folder, it is broken up by figure (beside test folders).
