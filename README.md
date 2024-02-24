@@ -1,7 +1,5 @@
 # Oil Research for MIT Sloan
 
-## Blog Post
-
 Created the graphs for this [blog post](https://cepr.org/voxeu/columns/how-make-price-cap-russian-oil-most-effective).
 
 ## Overview
