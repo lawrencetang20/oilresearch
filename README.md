@@ -53,4 +53,5 @@ Both displaying no treasury.gov data.
 ### Figure 6 - Monthly Brent crude oil prices vs. commodity basket
 
 ### Figure 7 - Russia's government tax revenue
+![](/saved_pngs/figure_7/bar_chart.png)
 
