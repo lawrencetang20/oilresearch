@@ -27,6 +27,8 @@ def regressionPlot(data):
       color = post_colors[int((date_values[i] - min(date_values)) / (max(date_values) - min(date_values)) * 255)]
     ax.scatter(x_values[i], y_values[i], color=color)
 
+  # plt.xlim(0, 20)
+
   ax.set_xlabel('Extraction (million barrels per day)')
   ax.set_ylabel('Price ($ per barrel)')
 

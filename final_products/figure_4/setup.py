@@ -2,7 +2,7 @@ import data_functions as data
 import pandas as pd
 
 start = '2022-01-01'
-end = '2024-02-20'
+end = '2024-04-01'
 link = f'http://api.scraperlink.com/investpy/?email=tangla@mit.edu&type=historical_data&product=commodities&from_date={start}&to_date={end}&time_frame=Daily&name=brent'
 
 investing_urals = '../../excel_csv/figure_4/crudeoil.csv'
